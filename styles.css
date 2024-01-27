@@ -94,3 +94,9 @@ input[type="submit"] {
   color: #0092ca;
   margin-right: 20px;
 }
+.hide-modal {
+  display: none;
+}
+.show-modal {
+  display: flex;
+}

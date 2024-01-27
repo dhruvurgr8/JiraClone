@@ -1,7 +1,17 @@
 const form = document.querySelector(".form");
 form.addEventListener("submit", formData);
+const createBtn = document.querySelector(".create-task"); // access minimize button
 const containers = document.querySelectorAll(".drop"); //get all the containers to add drop event
+const closeBtn = document.querySelector(".minimize");
+closeBtn.addEventListener("click", () => {
+  form.classList.toggle("hide-modal");
+});
 let draggableElement = null;
+
+createBtn.addEventListener("click", toggleWindow);
+function toggleWindow() {
+  form.classList.toggle("hide-modal");
+}
 
 function formData(e) {
   e.preventDefault();
